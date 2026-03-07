@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { PhaserGame } from './game/PhaserGame';
+import { EventBus } from './game/EventBus';
+import './app.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [isShopOpen, setIsShopOpen] = useState(false);
+    const [trustLevel, setTrustLevel] = useState(15);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    useEffect(() => {
+        // Nasłuchujemy, co się dzieje w grze
+        EventBus.on('trust-increased', (newLevel) => {
+            setTrustLevel(newLevel);
+            // Kiedy zaufanie rośnie, możemy to zapisać do bazy!
+        });
+
+        return () => {
+            EventBus.removeListener('trust-increased');
+        };
+    }, []);
+
+    return (
+        <div className="app-container">
+            <header>
+                <h1>Kotek Burek - Zaufanie: {trustLevel}%</h1>
+            </header>
+            
+            {/* Nasza gra w Phaserze */}
+            <PhaserGame />
+            
+            {/* Reactowe przyciski sterujące grą */}
+            {/* <ActionButtons onOpenShop={() => setIsShopOpen(true)} /> */}
+
+            {/* Reactowy Modal Sklepu */}
+            {/*isShopOpen && <CharityShop onClose={() => setIsShopOpen(false)} /> */}
+        </div>
+    );
 }
 
-export default App
+export default App;
