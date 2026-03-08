@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Baza danych naszych kotków ze zaktualizowanymi linkami i SVG
+// baza kotow
 const catsData = [
   {
     id: 'dudusia',
@@ -10,7 +10,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2025/12/image-2-16.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation">
-        {/* Dudusia - Bura z białym */}
         <rect x="8" y="12" width="32" height="28" fill="#8b7355" />
         <rect x="12" y="16" width="4" height="20" fill="#30130b" />
         <rect x="20" y="12" width="4" height="24" fill="#30130b" />
@@ -37,7 +36,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2025/12/image-3-3.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation" style={{ animationDelay: '0.5s' }}>
-        {/* Emti - Trójkolorowa */}
         <rect x="8" y="12" width="32" height="28" fill="#fff" />
         <rect x="8" y="12" width="10" height="10" fill="#333" />
         <rect x="28" y="24" width="12" height="16" fill="#333" />
@@ -59,7 +57,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2025/12/image-6-3.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation" style={{ animationDelay: '1s' }}>
-        {/* Fuks - Biało-szary */}
         <rect x="8" y="12" width="32" height="28" fill="#fff" />
         <rect x="8" y="12" width="8" height="6" fill="#888" />
         <rect x="34" y="12" width="6" height="6" fill="#888" />
@@ -81,7 +78,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2025/12/image-5-3.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation" style={{ animationDelay: '1.5s' }}>
-        {/* Karla - Szara kotka z zielonymi oczami */}
         <rect x="8" y="12" width="32" height="28" fill="#888" />
         <rect x="8" y="4" width="8" height="14" fill="#888" />
         <rect x="32" y="4" width="8" height="14" fill="#888" />
@@ -101,7 +97,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2026/01/image-7.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation" style={{ animationDelay: '2s' }}>
-        {/* Kiki - Pingwinka (Czarno-biała) */}
         <rect x="8" y="12" width="32" height="28" fill="#333" />
         <rect x="16" y="24" width="16" height="16" fill="#fff" />
         <rect x="20" y="12" width="8" height="12" fill="#fff" />
@@ -121,7 +116,6 @@ const catsData = [
     realPhoto: 'https://trzymajsiekocie.pl/wp-content/uploads/2025/12/image-32.webp',
     pixelSvg: (
       <svg viewBox="0 0 48 48" width="64" height="64" className="float-animation" style={{ animationDelay: '2.5s' }}>
-        {/* Jagoda - Bura */}
         <rect x="8" y="12" width="32" height="28" fill="#a67c52" />
         <rect x="12" y="16" width="4" height="20" fill="#663110" />
         <rect x="20" y="12" width="4" height="24" fill="#663110" />
@@ -172,7 +166,7 @@ export default function Gallery({ onBack }) {
             
             <p className="retro-font text-[22px] leading-tight text-amber-800 flex-grow">{cat.desc}</p>
             
-            {/* Nowy interaktywny przycisk "POZNAJ MNIE" */}
+            {/* link do strony stowarzyszenia */}
             <a 
               href={cat.url}
               target="_blank" 

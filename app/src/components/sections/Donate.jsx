@@ -12,7 +12,6 @@ export default function Donate({ onBack }) {
         Twoja wpłata pomaga prawdziwym kotom w schroniskach, a w zamian dostajesz super przedmioty do gry! Wybierz kwotę:
       </p>
       
-      {/* Przyciski z kwotami dopasowanymi do nagród w grze */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <button className="pixel-btn card-orange p-4 text-center hover:bg-amber-200 transition-colors group">
           <span className="pixel-font text-lg text-amber-900 group-hover:scale-110 inline-block transition-transform">5 zł</span>
@@ -32,7 +31,7 @@ export default function Donate({ onBack }) {
         </button>
       </div>
 
-      {/* Sekcja własnej kwoty */}
+      {/* wlasna kwota */}
       <div className="card-orange pixel-border p-4 mb-8">
         <label className="pixel-font text-xs text-amber-900 block mb-2">WŁASNA KWOTA:</label>
         <div className="flex gap-2">
@@ -46,28 +45,24 @@ export default function Donate({ onBack }) {
         </div>
       </div>
 
-      {/* NOWA SEKCJA PŁATNOŚCI (Zamiast tekstu demonstracyjnego) */}
+      {/* sekcja platnosci */}
       <div className="text-center mb-8">
         <div className="mb-5">
           <p className="pixel-font text-[10px] md:text-xs text-amber-900 mb-3 opacity-80">BEZPIECZNE PŁATNOŚCI OBSŁUGUJĄ:</p>
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             
-            {/* Ikona BLIK */}
             <div className="bg-white text-black px-3 py-1 font-sans font-black tracking-widest border-2 border-black shadow-[2px_2px_0_#000] flex items-center select-none">
               BLIK
             </div>
             
-            {/* Ikona Przelewy24 */}
             <div className="bg-[#00704a] text-white px-3 py-1 font-sans font-bold border-2 border-[#004d33] shadow-[2px_2px_0_#004d33] flex items-center select-none">
               Przelewy24
             </div>
             
-            {/* Ikona PayPal */}
             <div className="bg-[#003087] text-white px-3 py-1 font-sans font-bold italic border-2 border-[#001c52] shadow-[2px_2px_0_#001c52] flex items-center select-none">
               PayPal
             </div>
             
-            {/* Ikona Kart Płatniczych */}
             <div className="bg-gray-100 text-slate-800 px-3 py-1 font-sans font-bold border-2 border-gray-400 shadow-[2px_2px_0_#6b7280] flex items-center gap-1.5 select-none">
               <div className="flex">
                 <div className="w-3.5 h-3.5 bg-red-500 rounded-full opacity-90"></div>
@@ -79,13 +74,13 @@ export default function Donate({ onBack }) {
           </div>
         </div>
 
-        {/* Główny przycisk wpłaty */}
+        {/* przycisk wplaty */}
         <button className="pixel-btn bg-rose-500 text-white px-8 py-4 pixel-font text-sm md:text-base border-2 border-rose-800 shadow-[4px_4px_0_#9f1239] hover:bg-rose-600 hover:-translate-y-1 active:translate-y-0 active:shadow-none transition-all"> 
           💖 WPŁAĆ I ODBIERZ NAGRODY 
         </button>
       </div>
 
-      {/* Sekcja nagród */}
+      {/* nagrody */}
       <div className="mt-6 card-orange pixel-border p-5">
         <h3 className="pixel-font text-sm text-amber-900 mb-5 text-center">🎁 WIRTUALNE NAGRODY DO GRY 🎁</h3>
         

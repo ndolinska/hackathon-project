@@ -4,14 +4,13 @@ export default function Navigation({ onSelectSection }) {
   return (
     <nav className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       
-      {/* Karta 1: Tryb Gry */}
+      {/* gra */}
       <div className="card-cream pixel-border p-6 relative overflow-hidden">
         <div className="absolute top-2 right-2">
           <svg viewBox="0 0 24 24" width="32" height="32">
             <rect x="4" y="8" width="16" height="12" fill="#8b7355" /><rect x="6" y="10" width="12" height="8" fill="#5a5" /><rect x="8" y="4" width="4" height="6" fill="#888" /><rect x="12" y="6" width="4" height="4" fill="#888" />
           </svg>
         </div>
-        {/* Poprawione wyrównanie: flex items-center oraz span z w-8 */}
         <h2 className="pixel-font text-sm md:text-base text-amber-900 mb-4 flex items-center">
           <span className="w-8">🎮</span> TRYB GRY
         </h2>
@@ -23,7 +22,7 @@ export default function Navigation({ onSelectSection }) {
         </button>
       </div>
 
-      {/* Karta 2: Galeria */}
+      {/* galeria */}
       <div className="card-orange pixel-border p-6 relative overflow-hidden">
         <div className="absolute top-2 right-2">
           <svg viewBox="0 0 24 24" width="32" height="32">
@@ -41,7 +40,7 @@ export default function Navigation({ onSelectSection }) {
         </button>
       </div>
 
-      {/* Karta 3: Adopcja */}
+      {/* adopcja */}
       <div className="card-orange pixel-border p-6 relative overflow-hidden">
         <div className="absolute top-2 right-2">
           <svg viewBox="0 0 24 24" width="32" height="32">
@@ -59,7 +58,7 @@ export default function Navigation({ onSelectSection }) {
         </button>
       </div>
 
-      {/* Karta 4: Wesprzyj */}
+      {/* wesprzyj */}
       <div className="card-cream pixel-border p-6 relative overflow-hidden">
         <div className="absolute top-2 right-2">
           <svg viewBox="0 0 24 24" width="32" height="32">

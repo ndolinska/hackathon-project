@@ -15,15 +15,6 @@ export default function Decorations() {
       <svg className="pixel-shelf" style={{ top: '35%', right: '2%' }} viewBox="0 0 50 35" width="70" height="49">
         <rect x="0" y="28" width="50" height="5" fill="#8b6914" /><rect x="0" y="26" width="50" height="3" fill="#a67c52" /><rect x="4" y="10" width="8" height="18" fill="#d4a574" /><rect x="13" y="14" width="10" height="14" fill="#7cb5d4" /><rect x="24" y="8" width="8" height="20" fill="#d47c7c" /><rect x="33" y="12" width="12" height="16" fill="#a5d47c" />
       </svg>
-      {/* <svg style={{ position: 'absolute', top: '50%', left: '4%' }} viewBox="0 0 40 50" width="50" height="62">
-        <rect x="0" y="0" width="40" height="50" fill="#8b6914" /><rect x="4" y="4" width="32" height="42" fill="#f5efe6" /><rect x="8" y="8" width="24" height="34" fill="#d4c4a8" /><rect x="14" y="20" width="12" height="10" fill="#f5a855" /><rect x="14" y="16" width="4" height="6" fill="#f5a855" /><rect x="22" y="16" width="4" height="6" fill="#f5a855" /><rect x="16" y="22" width="2" height="2" fill="#333" /><rect x="22" y="22" width="2" height="2" fill="#333" />
-      </svg> */}
-      {/* <svg style={{ position: 'absolute', top: '55%', right: '5%' }} viewBox="0 0 30 50" width="40" height="67">
-        <rect x="10" y="40" width="10" height="10" fill="#a67c52" /><rect x="8" y="38" width="14" height="4" fill="#8b6914" /><rect x="12" y="20" width="6" height="20" fill="#c9a65a" /><rect x="4" y="4" width="22" height="18" fill="#f5d89a" /><rect x="6" y="6" width="18" height="14" fill="#fff8e8" />
-      </svg>
-      <svg style={{ position: 'absolute', bottom: '5%', left: '50%', transform: 'translateX(-50%)' }} viewBox="0 0 200 40" width="300" height="60">
-        <ellipse cx="100" cy="20" rx="95" ry="18" fill="#c9a65a" /><ellipse cx="100" cy="20" rx="80" ry="14" fill="#d4b878" /><ellipse cx="100" cy="20" rx="60" ry="10" fill="#e8cc8c" />
-      </svg> */}
       <svg className="pixel-plant float-animation" style={{ bottom: '15%', left: '10%', animationDelay: '2s' }} viewBox="0 0 24 32">
         <rect x="8" y="26" width="8" height="6" fill="#a67c52" /><rect x="10" y="18" width="4" height="10" fill="#4a7c59" /><rect x="6" y="12" width="4" height="8" fill="#5a9c6a" /><rect x="14" y="12" width="4" height="8" fill="#5a9c6a" /><rect x="8" y="6" width="8" height="10" fill="#6ab77a" />
       </svg>
