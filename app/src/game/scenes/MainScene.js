@@ -34,25 +34,24 @@ export class MainScene extends Phaser.Scene {
             lightest: 0xf8d6a3
         };
 
-        // 1. Tło i podłoga
         this.add.rectangle(300, 600, 600, 400, colors.light);
         this.anims.create({
             key: 'idle',
-            frames: this.anims.generateFrameNumbers('cat', { start: 147, end: 168 }), // Np. klatka 0 i 1 to oddychanie
-            frameRate: 4, // 2 klatki na sekundę (bardzo powoli, styl retro)
-            repeat: -1    // -1 oznacza pętlę w nieskończoność
+            frames: this.anims.generateFrameNumbers('cat', { start: 147, end: 168 }), 
+            frameRate: 4, 
+            repeat: -1    
         });
 
         this.anims.create({
             key: 'eat',
-            frames: this.anims.generateFrameNumbers('cat', { start: 98, end: 101 }), // Klatki jedzenia
+            frames: this.anims.generateFrameNumbers('cat', { start: 98, end: 101 }), 
             frameRate: 4,
-            repeat: 4     // Powtórz 4 razy
+            repeat: 4    
         });
 
         this.anims.create({
             key: 'play',
-            frames: this.anims.generateFrameNumbers('cat', { start: 175, end: 182}), // Klatki zabawy
+            frames: this.anims.generateFrameNumbers('cat', { start: 175, end: 182}), 
             frameRate: 4,
             repeat: 4
         });
@@ -82,9 +81,9 @@ export class MainScene extends Phaser.Scene {
                 this.couchSprite.setVisible(true);
                 this.tweens.add({
                     targets: this.couchSprite,
-                    scale: 3, // Powrót do docelowego rozmiaru
+                    scale: 3, 
                     duration: 500,
-                    ease: 'Back.easeOut' // Efekt sprężystego "wyskoczenia"
+                    ease: 'Back.easeOut'
                 });
             }
         });
@@ -98,7 +97,7 @@ export class MainScene extends Phaser.Scene {
 
                 this.catSprite.once('animationcomplete', () => {
                     this.catSprite.play('idle');
-                    if (this.hatSprite.visible) this.hatSprite.play('idle_hat'); // <- POWRÓT CZAPKI
+                    if (this.hatSprite.visible) this.hatSprite.play('idle_hat');
                 });
             }
         });
@@ -109,11 +108,10 @@ export class MainScene extends Phaser.Scene {
                 this.updateBars();
                 
                 this.catSprite.play('play');
-                if (this.hatSprite.visible) this.hatSprite.play('play_hat'); // <- SYNC CZAPKI
-
+                if (this.hatSprite.visible) this.hatSprite.play('play_hat'); 
                 this.catSprite.once('animationcomplete', () => {
                     this.catSprite.play('idle');
-                    if (this.hatSprite.visible) this.hatSprite.play('idle_hat'); // <- POWRÓT CZAPKI
+                    if (this.hatSprite.visible) this.hatSprite.play('idle_hat'); 
                 });
             }
         });
@@ -126,16 +124,14 @@ export class MainScene extends Phaser.Scene {
 
         EventBus.emit('current-scene-ready', this);
         
-        // --- 5. Spadające statystyki w czasie (Timer) ---
         this.time.addEvent({
-            delay: 3000, // Co 3 sekundy na potrzeby testów hackathonowych
+            delay: 3000, 
             callback: this.decreaseStats,
             callbackScope: this,
             loop: true
         });
     }
 
-    // Funkcja obniżająca statystyki z biegiem czasu
     decreaseStats() {
         this.stats.hunger = Math.max(0, this.stats.hunger - 2);
         this.stats.happiness = Math.max(0, this.stats.happiness - 1);

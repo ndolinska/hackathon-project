@@ -11,16 +11,12 @@ export const PhaserGame = ({ currentActiveScene }) => {
         if (!gameRef.current) {
             const phaserConfig = {
                 ...config,
-                parent: 'game-container' // ID diva poniżej
+                parent: 'game-container' 
             };
             gameRef.current = new Phaser.Game(phaserConfig);
-            
-            // Informujemy Reacta, gdy gra jest w pełni gotowa
             EventBus.emit('current-scene-ready', gameRef.current.scene.keys.MainScene);
         }
-
         return () => {
-            // Sprzątanie pamięci przy wychodzeniu z aplikacji
             if (gameRef.current) {
                 gameRef.current.destroy(true);
                 gameRef.current = null;

@@ -6,10 +6,9 @@ const config = {
     width: 600,
     height: 800,
     parent: 'game-container',
-    backgroundColor: '#c7a26e', // Klasyczny kolor Gameboya
-    pixelArt: true, // Zatrzymuje rozmycie pikseli
+    backgroundColor: '#c7a26e', 
+    pixelArt: true,
     scale: {
-        // Skalowanie dopasowujące się do okna, zachowując proporcje
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },

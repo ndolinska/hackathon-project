@@ -85,7 +85,7 @@ export const CharityShop = ({ onClose }) => {
     );
 };
 
-// --- STYLE CSS (W TYM NOWY GRID) ---
+
 const styles = {
     container: { 
         padding: '10px', 
@@ -101,14 +101,14 @@ const styles = {
  
     itemsGrid: { 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(3, 1fr)', // Dwie równe kolumny (zmień na 3, jeśli chcesz więcej obok siebie)
-        gap: '10px' // Odstęp między kafelkami
+        gridTemplateColumns: 'repeat(3, 1fr)', 
+        gap: '10px' 
     },
     
     itemCard: { 
         display: 'flex', 
         flexDirection: 'column', 
-        alignItems: 'center', // Wyśrodkowanie zawartości
+        alignItems: 'center', 
         justifyContent: 'space-between',
         backgroundColor: '#663110', 
         color: '#f8d6a3', 
@@ -119,20 +119,20 @@ const styles = {
         fontSize: '12px',
         minHeight: '120px',
         width: '90px',
-        boxShadow: '4px 4px 0px rgba(0,0,0,0.3)', // Klasyczny retro cień
-        transition: 'transform 0.1s' // Lekka animacja przy kliknięciu (wymagałaby obsługi pseudo-klas, ale tu zostawiamy jako opcję)
+        boxShadow: '4px 4px 0px rgba(0,0,0,0.3)', 
+        transition: 'transform 0.1s'
     },
     
     icon: {
         width: '64px',
         height: '64px',
         marginBottom: '5px',
-        imageRendering: 'pixelated' // Wymusza brak rozmywania obrazka (chrupiące piksele!)
+        imageRendering: 'pixelated' 
     },
     
     price: {
         marginTop: '5px',
-        color: '#ffffff', // Wyróżnienie ceny innym kolorem
+        color: '#ffffff', 
     },
 
     closeBtn: { 
