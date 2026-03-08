@@ -36,7 +36,7 @@ export default function Navigation({ onSelectSection }) {
         <p className="retro-font text-lg md:text-xl text-amber-800 mb-4">
           Przeglądaj nasze urocze kociaki czekające na adopcję. Każdy ma unikalną osobowość!
         </p>
-        <button onClick={() => onSelectSection('gallery')} className="pixel-btn bg-amber-700 text-white px-4 py-3 pixel-font text-xs w-full hover:bg-amber-800">
+        <button onClick={() => onSelectSection('gallery')} className="pixel-btn bg-amber-700 text-white px-4 py-3 pixel-font text-xs w-full hover:bg-amber-800 mt-7">
           👀 ZOBACZ KOTKI
         </button>
       </div>

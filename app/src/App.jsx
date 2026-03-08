@@ -45,7 +45,7 @@ export default function App() {
             <div className="scanlines"></div>
             
             {/* Animowane roślinki i półki w tle */}
-            <Decorations />
+            {/* <Decorations /> */}
 
             <div className="relative min-h-full w-full p-4 md:p-8" style={{ zIndex: 1 }}>
                 <div className="max-w-4xl mx-auto">
