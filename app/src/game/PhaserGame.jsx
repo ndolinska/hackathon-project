@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Phaser from 'phaser';
+import config from './config';
 import { EventBus } from './EventBus';
 
 export const PhaserGame = ({ currentActiveScene }) => {
@@ -9,7 +10,7 @@ export const PhaserGame = ({ currentActiveScene }) => {
         // Inicjalizacja gry tylko raz
         if (!gameRef.current) {
             const phaserConfig = {
-                //...config,
+                ...config,
                 parent: 'game-container' // ID diva poniżej
             };
             gameRef.current = new Phaser.Game(phaserConfig);
