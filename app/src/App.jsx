@@ -40,7 +40,7 @@ export default function App() {
     }, []);
 
     return (
-        <div className="h-full retro-checkered-bg overflow-auto">
+        <div className="min-h-screen retro-checkered-bg overflow-auto">
             {/* Nakładka retro na cały ekran */}
             <div className="scanlines"></div>
             
